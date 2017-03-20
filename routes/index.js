@@ -51,6 +51,10 @@ router.get('/', common.restrict, function(req, res, next) {
     });
 });
 
+router.get('/health/check', function(req, res) {
+    res.status(200).json({});
+});
+
 router.post('/protected/action', function(req, res) {
     var db = req.app.db;
     // get article

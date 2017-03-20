@@ -38,6 +38,6 @@
         "api_allowed": false,
         "locale": "en",
         "intranetBaseUrl": "https://intranet.elementsinsured.com",
-        "app_context": ""
+        "app_context": "kb"
     }
 }
