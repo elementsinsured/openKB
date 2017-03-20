@@ -158,5 +158,11 @@
 	"Access denied": "Access denied",
 	"User account inserted": "User account inserted",
 	"Directory successfully created": "Directory successfully created",
-	"File uploaded successfully": "File uploaded successfully"
+	"File uploaded successfully": "File uploaded successfully",
+	"Setup": "Setup",
+	"Email address": "Email address",
+	"Confirm password": "Confirm password",
+	"Complete setup": "Complete setup",
+	"config is not defined": "config is not defined",
+	"User is admin?": "User is admin?"
 }

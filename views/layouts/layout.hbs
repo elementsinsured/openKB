@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-        {{#if result.kb_seo_title}}
-        <title>{{result.kb_seo_title}}</title>
-        <meta property="og:title" content="{{result.kb_seo_title}}" />
-        {{else}}
-        {{#if result.kb_title}}
-        <title>{{result.kb_title}}</title>
-        <meta property="og:title" content="{{result.kb_title}}" />
-        {{else}}
-        <title>{{title}}</title>
-        <meta property="og:title" content="{{title}}" />
-        {{/if}}
-        {{/if}}
+        <title>Elements Knowledgebase</title>
+        <meta property="og:title" content="Elements Knowledgebase" />
 	    <meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -51,7 +41,7 @@
 		<link rel="stylesheet" href="{{app_context}}/stylesheets/bootstrap-tokenfield.css">
         <link rel="stylesheet" href="{{app_context}}/stylesheets/jasny-bootstrap.min.css">
         <link rel="stylesheet" href="{{app_context}}/stylesheets/jpushmenu.css">
-        <link rel='icon' href='{{app_context}}/favicon.png' />
+        <link rel='icon' href='{{app_context}}/favicon.ico' />
 		<script src="{{app_context}}/jquery/jquery.min.js"></script>
         <script>{{{state}}}</script>
 		<script src="{{app_context}}/bootstrap/js/bootstrap.min.js"></script>
@@ -94,10 +84,10 @@
 						<span class="icon-bar"></span>
 					</button>
                     {{#ifCond config.settings.show_website_logo '===' true}}
-                    <a class="navbar-brand brand-image" href="{{app_context}}/"><img src="{{app_context}}/static/logo.png" width="140"></a>
+                    <a class="navbar-brand brand-image" href="{{app_context}}/"><img src="{{app_context}}/static/logo.png" width="250"></a>
                     {{else}}
                         {{#ifCond config.settings.website_title '===' 'openKB'}}
-                        <a class="navbar-brand brand-image" href="{{app_context}}/"><img src="{{app_context}}/static/logo.png" width="140"></a>
+                        <a class="navbar-brand brand-image" href="{{app_context}}/"><img src="{{app_context}}/static/logo.png" width="250"></a>
                         {{else}}
                         <a class="navbar-brand" href="{{app_context}}/">{{config.settings.website_title}}</a>
                         {{/ifCond}}
@@ -159,12 +149,5 @@
         <input type="hidden" value="{{app_context}}" id="app_context">
         <input type="hidden" value="{{config.settings.links_blank_page}}" id="blank_links">
 		<div id="notify_message"></div>
-		{{#if show_footer}}
-			<footer class="footer">
-				<div class="container">
-					<p class="text-muted">{{__ "Powered by"}} openKB</p>
-				</div>
-			</footer>
-		{{/if}}
 	</body>
 </html>

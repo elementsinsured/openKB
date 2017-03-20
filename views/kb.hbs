@@ -44,7 +44,7 @@
             {{{kb_body}}}
         </div>
         {{#if config.settings.allow_voting}}
-            <div class="row">
+            <div class="row" style="padding-top: 65px;">
                 <div class="voting text-right col-lg-12">
                     <span>{{__ "Was this article helpful?"}}</span>
                     <button id="btnUpvote" class="btn btn-sm btn-default"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
@@ -57,6 +57,11 @@
                             0
                         {{/if}}
                     </span>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 25px;">
+                <div class="text-right col-lg-12">
+                     <strong>{{__ "Author"}}:</strong> <span class="text-info">{{result.kb_author}} {{#ifCond config.settings.show_author_email '===' true}}({{result.kb_author_email}}){{/ifCond}}</span>
                 </div>
             </div>
         {{/if}}

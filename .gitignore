@@ -9,3 +9,5 @@ public/uploads/
 data/export.zip
 .vscode
 jsconfig.json
+/.DS_Store
+/public/.DS_Store
