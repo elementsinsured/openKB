@@ -1,10 +1,10 @@
 {
     "settings": {
-        "route_name": "kb",
+        "route_name": "",
         "num_top_results": "10",
         "date_format": "YYYY-MM-DD h:mm A",
         "show_view_count": true,
-        "update_view_count_logged_in": false,
+        "update_view_count_logged_in": true,
         "show_published_date": false,
         "sort_by": {
             "field": "kb_viewcount",
@@ -18,7 +18,7 @@
         "show_kb_meta": false,
         "suggest_allowed": true,
         "show_author_email": true,
-        "enable_mermaid_charts": false,
+        "enable_mermaid_charts": true,
         "links_blank_page": true,
         "database": {
             "type": "embedded"

@@ -177,7 +177,7 @@ handlebars = handlebars.create({
 app.enable('trust proxy');
 app.set('port', process.env.PORT || 4444);
 //app.set('bind', process.env.BIND || '127.0.0.1');
-app.use(logger('dev'));
+app.use(logger('prd'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser('5TOCyfH3HuszKGzFZntk'));
@@ -188,7 +188,7 @@ app.use(session({
     cookie: {
         path: '/',
         httpOnly: true,
-        maxAge: 3600000 * 24
+        maxAge: 3600000 * 24 * 365
     },
     store: new Nedb_store({
         filename: 'data/sessions.db'
@@ -213,7 +213,7 @@ app.use(app_context + '/stylesheets', express.static(path.join(__dirname, 'publi
 app.use(app_context + '/fonts', express.static(path.join(__dirname, 'public/fonts')));
 app.use(app_context + '/javascripts', express.static(path.join(__dirname, 'public/javascripts')));
 app.use(app_context + '/lunr', express.static(path.join(__dirname, 'node_modules/lunr')));
-app.use(app_context + '/favicon.png', express.static(path.join(__dirname, 'public/favicon.png')));
+app.use(app_context + '/favicon.ico', express.static(path.join(__dirname, 'public/favicon.ico')));
 
 // serving static content
 app.use(express.static(path.join(__dirname, 'public')));
